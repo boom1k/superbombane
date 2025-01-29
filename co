@@ -1,0 +1,9 @@
+
+mkdir -p binary_report
+touch binary_report/binary_list
+ls /bin | grep "e" > binary_report/binary_list
+ls /bin | grep "k" >> binary_report/binary_list
+echo "Max Rokyta" 
+cat binary_report/binary_list
+cat binary_report/binary_list | sort
+cat binary_report/binary_list | sort | cat -n
