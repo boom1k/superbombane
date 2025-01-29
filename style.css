@@ -1,44 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 body {
     background-color: white;
+    font-family: "Russo One", serif;
+    font-style: normal;
 }
 
+
+  
 #website {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
-    font-family: Arial;
 }
 
-#header {
-    display: grid;
-    grid-template-columns: auto 1fr;
+header {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    background-color: #ddd;
-    color: black;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
 }
 
-.logo {
-    color: black;
-    text-decoration: none;
-    font-size: 25px;
+.logo img{
+    width: 100px;
+    height: 100px;
 }
 
-
-.menu {
-    text-align: right;
-}
-
-.menu li {
-    display: inline-block;
-    padding: 5px;
-}
-
-.menu li a {
-    color: black;
-    text-decoration: none;
-}
-
-.baner {
-    background-color: red;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
