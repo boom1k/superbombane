@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 body {
-    background-color: white;
+    background-color: #0D1B2A;
     font-family: "Russo One", serif;
     font-style: normal;
 }
@@ -18,6 +18,11 @@ header {
     align-items: center;
     padding: 10px;
     border-bottom: 1px solid #ccc;
+    background-color: #1B263B       ;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: white;
+    border: 5px solid skyblue;
 }
 
 .logo img{
@@ -31,15 +36,18 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    margin-right: 70px;
+    font-size: 18px;
 }
 
 .banner {
     width: 100%;
     height: 500px;
-    background-image: url('../superbombane/banner.webp');
+    background-image: url('../superbombane/cc.png');
     background-size: cover;
     background-position: center;
     opacity: 80%;
+    object-fit: contain;
 }
 
 .banner-text {
@@ -63,21 +71,30 @@ nav ul {
     font-size: 24px;
 }
 
-.features{
+.features {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px 0;
 }
 
-.feature{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 30px;
+.feature {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.feature-header{
-    display: flex;
-    align-items: center;
+.feature-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #FCA311;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #14213D;
+    color: white;
+    margin-top: 40px;
 }
 
 .feature-header svg {
@@ -86,4 +103,8 @@ nav ul {
 
 .feature-head h3 {
     margin-right: 10px;
+}
+
+h1{
+    color: white;
 }
