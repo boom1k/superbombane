@@ -25,7 +25,8 @@ document.addEventListener("keydown", function(e) {
 document.addEventListener("contextmenu", function(e) {
     e.preventDefault();
 });
-// tohle meni title stranky kdyz uz to krades tak zmen 29 msg Maxos a dole mas timeout nebo si udelej variable
+
+// tohle meni title stranky a dole mas timeout na to aby se to zmenilo
 const msg = " MAX ";
 const symbols = "!<>-_\\/[]{}—=+*^?#";
 let displayText = "";
@@ -61,8 +62,3 @@ function typewriterEffect() {
 typewriterEffect();
 
 
-
-/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-particlesJS.load('particles-js', 'assets/particles.json', function() {
-    console.log('callback - particles.js config loaded');
-  });

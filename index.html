@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Sigma Sigma Boi</title>
+    <link id="dynamic-favicon" rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/2/23/Adobe_Photoshop_Icon_2021.svg">
 </head>
 <body>
 
@@ -69,19 +70,21 @@
     </div>
     <div class="container">
         <div class="block">
-            <img src="https://media.discordapp.net/attachments/1151567109927731284/1179880190122401812/nahoda.gif?ex=67c566ce&is=67c4154e&hm=96b914a73f237090b6413c167d28ff36accfa4d95379aece10e039ee36730fa1&" alt="Služba 1">
-            <h3>Toto je nadpis</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            <img src="https://media.discordapp.net/attachments/1278437267614077040/1346164055269838932/image.png?ex=67c92ab9&is=67c7d939&hm=200086e8c0ef41d03676ba6324922add1fe1a26f37d76d039349bc9de20cc5d5&=&format=webp&quality=lossless&width=758&height=1160" alt="Služba 1">
+            <h3 id="dynamic-title">Rapid Updates</h3>
+            <p id="dynamic-text">Continuous improvements and updates to keep you ahead.</p>            
         </div>
         <div class="block block-reverse">
-            <img src="https://cdn.discordapp.com/attachments/1151567109927731284/1345844367079772160/molly-my-beloved.gif?ex=67c606bd&is=67c4b53d&hm=5c415c29d917b5efd31b81f2999392ef02a1c2873ebc08a39903183a1f81378d&" alt="Služba 2">
-            <h3>Toto je nadpis</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            <img src="https://media.discordapp.net/attachments/1278437267614077040/1346164055269838932/image.png?ex=67c92ab9&is=67c7d939&hm=200086e8c0ef41d03676ba6324922add1fe1a26f37d76d039349bc9de20cc5d5&=&format=webp&quality=lossless&width=758&height=1160" alt="Služba 2">
+            <h3 id="dynamic-title">Scan Technology</h3>
+            <p id="dynamic-text">Advanced scanning ensures everyone goes unnoticed.</p>
+            
         </div>
         <div class="block">
-            <img src="https://media.discordapp.net/attachments/1140319187479306301/1183984191763906700/summitstrikrfn_-_1734063953070657701.gif?ex=67c5d474&is=67c482f4&hm=92459798bfc881bb0b19292a2e006809c68ead7bf143b49bde91ba0008a37f0c&" alt="Služba 3">
-            <h3>Toto je nadpis</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            <img src="https://media.discordapp.net/attachments/1278437267614077040/1346164055269838932/image.png?ex=67c92ab9&is=67c7d939&hm=200086e8c0ef41d03676ba6324922add1fe1a26f37d76d039349bc9de20cc5d5&=&format=webp&quality=lossless&width=758&height=1160" alt="Služba 3">
+            <h3 id="dynamic-title">24/7 Support</h3>
+            <p id="dynamic-text">Our team is always available to assist you.</p>
+            
         </div>
     </div>
     <br>
@@ -90,7 +93,7 @@
             <div class="contact-address">
                 <h3>Kontaktní adresa</h3>
                 <div class="footer-block">
-                    Fossil Games s.r.o. <br>
+                    Lusive s.r.o. <br>
                     Ulice 123 <br>
                     123 45 Město <br>
                 </div>
@@ -147,5 +150,25 @@ themeSwitch.addEventListener('click', () => {
     }
 });
 
+ // Array of favicons to rotate
+ const favicons = [
+      'https://upload.wikimedia.org/wikipedia/commons/2/23/Adobe_Photoshop_Icon_2021.svg', // Photoshop
+      'https://upload.wikimedia.org/wikipedia/commons/a/ab/Adobe_Illustrator_CC_icon.svg', // Illustrator
+      'https://upload.wikimedia.org/wikipedia/commons/a/a9/Adobe_Premiere_Pro_CC_icon.svg', // Premiere Pro
+      'https://upload.wikimedia.org/wikipedia/commons/a/a3/Adobe_Acrobat_Reader_DC_icon.svg', // Adobe Acrobat
+      'https://upload.wikimedia.org/wikipedia/commons/9/91/Adobe_Express_logo.svg' // Adobe Express
+    ];
+
+    let currentFaviconIndex = 0;
+
+    // Function to change favicon
+    function changeFavicon() {
+      const faviconLink = document.getElementById('dynamic-favicon');
+      currentFaviconIndex = (currentFaviconIndex + 1) % favicons.length;
+      faviconLink.href = favicons[currentFaviconIndex];
+    }
+
+    // Change favicon every 0.5 seconds
+    setInterval(changeFavicon, 300);
 </script>
 </html>
